@@ -24,30 +24,30 @@ class _SignInPageState extends State<SignInPage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-          color: Colors.black,
+          color: Colors.white24,
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Sign In',
+                'Giriş Yap',
                 style: TextStyle(
                     fontSize: 35,
-                    color: Colors.white,
+                    color: Colors.blue,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 20,
               ),
-              buttonItem("Continue with google", "assets/google.svg", 25),
-              buttonItem("Continue with Phone", "assets/phone.svg", 25),
+              buttonItem("Google ile devam et", "assets/google.svg", 25),
+              buttonItem("Telefon ile devam et", "assets/phone.svg", 25),
               SizedBox(
                 height: 10,
               ),
               Text(
                 "Or",
-                style: TextStyle(color: Colors.white, fontSize: 16),
+                style: TextStyle(color: Colors.blue, fontSize: 16),
               ),
               SizedBox(
                 height: 10,
@@ -56,7 +56,7 @@ class _SignInPageState extends State<SignInPage> {
               SizedBox(
                 height: 10,
               ),
-              textItem("Password", _passwordContrller, true),
+              textItem("Şifre", _passwordContrller, true),
               SizedBox(
                 height: 20,
               ),
@@ -68,8 +68,8 @@ class _SignInPageState extends State<SignInPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    "If you don't have an account? ",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                    "Bir hesabın yok mu? ",
+                    style: TextStyle(color: Colors.black, fontSize: 20),
                   ),
                   InkWell(
                     onTap: () {
@@ -79,7 +79,7 @@ class _SignInPageState extends State<SignInPage> {
                           (route) => false);
                     },
                     child: Text(
-                      "Register.",
+                      "Kayıt Ol.",
                       style: TextStyle(
                           color: Colors.blue,
                           fontSize: 20,
@@ -92,7 +92,7 @@ class _SignInPageState extends State<SignInPage> {
                 height: 10,
               ),
               Text(
-                "Forgot Password?",
+                "Şifreni mi Unuttun?",
                 style: TextStyle(
                     color: Colors.blue,
                     fontSize: 20,
@@ -113,7 +113,7 @@ class _SignInPageState extends State<SignInPage> {
         elevation: 8,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
-            side: BorderSide(width: 2, color: Colors.green)),
+            side: BorderSide(width: 2, color: Colors.blue.shade200)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -138,18 +138,18 @@ class _SignInPageState extends State<SignInPage> {
       height: 55,
       width: MediaQuery.of(context).size.width - 70,
       child: TextFormField(
-        style: TextStyle(color: Colors.white),
+        style: TextStyle(color: Colors.black),
         obscureText: obscureText,
         controller: controller,
         decoration: InputDecoration(
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
-                borderSide: BorderSide(width: 1.5, color: Colors.amber)),
+                borderSide: BorderSide(width: 1.5, color: Colors.blue)),
             labelText: labelText,
-            labelStyle: TextStyle(fontSize: 17, color: Colors.white),
+            labelStyle: TextStyle(fontSize: 17, color: Colors.grey),
             enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(15),
-                borderSide: BorderSide(width: 2, color: Colors.green))),
+                borderSide: BorderSide(width: 2, color: Colors.blue.shade100))),
       ),
     );
   }
@@ -188,9 +188,9 @@ class _SignInPageState extends State<SignInPage> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
           gradient: LinearGradient(colors: [
-            Color(0xfffd746c),
-            Color(0xffff9068),
-            Color(0xfffd746c)
+            Color(0xff2193b0),
+            Color(0xff6dd5ed),
+            Color(0xff2193b0),
           ]),
         ),
         child: Center(
