@@ -10,6 +10,7 @@ class YourCard extends StatefulWidget {
 class _YourCardState extends State<YourCard> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
@@ -25,19 +26,69 @@ class _YourCardState extends State<YourCard> {
             icon: Icon(Icons.arrow_back)),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(top: 20.0, left: 20, right: 20),
         child: Column(
           children: [
-            _container("assets/elkrem.jpg"),
-            SizedBox(
-              height: 10,
+            Expanded(
+              child: ListView(
+                children: [
+                  _container("assets/elkrem.jpg"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  _container("assets/elkrem2.jpeg"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  _container("assets/elkrem2.jpeg"),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  _container("assets/elkrem2.jpeg"),
+                ],
+              ),
             ),
-            _container("assets/elkrem2.jpeg"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: width - 40,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "Sepetinizde 2 ürün bulunmaktadır.",
+                            style: TextStyle(fontSize: 13),
+                          ),
+                          Text(
+                            "49.99 TL",
+                            style: TextStyle(
+                                fontWeight: FontWeight.w900, fontSize: 15),
+                          ),
+                        ],
+                      ),
+                      endButton(),
+                    ],
+                  ),
+                  color: Colors.orange,
+                ),
+              ],
+            )
           ],
         ),
       ),
     );
   }
+}
+
+Widget endButton() {
+  return RaisedButton(
+    color: Colors.orange[100],
+    onPressed: () {},
+    child: Text("Hesabı Öde"),
+  );
 }
 
 Widget _container(String imageUrl) {
@@ -106,6 +157,7 @@ Widget _container(String imageUrl) {
                           width: 25,
                           height: 25,
                           child: FloatingActionButton(
+                            heroTag: null,
                             onPressed: () {},
                             child: Icon(Icons.remove),
                             backgroundColor: Colors.orange,
@@ -125,6 +177,7 @@ Widget _container(String imageUrl) {
                           width: 25,
                           height: 25,
                           child: FloatingActionButton(
+                            heroTag: null,
                             backgroundColor: Colors.orange,
                             onPressed: () {},
                             child: Icon(

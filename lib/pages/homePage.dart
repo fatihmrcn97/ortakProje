@@ -19,10 +19,10 @@ class _HomePageState extends State<HomePage> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(builder: (builder) => YourCard()),
-                  (route) => true);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => YourCard()),
+              );
             },
             icon: Icon(Icons.shopping_cart),
           ),
