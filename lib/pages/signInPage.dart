@@ -91,12 +91,20 @@ class _SignInPageState extends State<SignInPage> {
               SizedBox(
                 height: 10,
               ),
-              Text(
-                "Şifreni mi Unuttun?",
-                style: TextStyle(
-                    color: Colors.blue,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold),
+              InkWell(
+                onTap: () {
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (builder) => HomePage()),
+                      (route) => false);
+                },
+                child: Text(
+                  "Şifreni mi Unuttun?",
+                  style: TextStyle(
+                      color: Colors.blue,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             ],
           ),
@@ -113,7 +121,7 @@ class _SignInPageState extends State<SignInPage> {
         elevation: 8,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(15),
-            side: BorderSide(width: 2, color: Colors.blue.shade200)),
+            side: BorderSide(width: 1, color: Colors.blue.shade200)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
