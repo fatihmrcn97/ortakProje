@@ -15,7 +15,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         //automaticallyImplyLeading: true,
         //leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-        title: Text("Home Page"),
+        title: Text("home Page"),
         actions: [
           IconButton(
             onPressed: () {
