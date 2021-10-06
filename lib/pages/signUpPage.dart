@@ -41,8 +41,8 @@ class _SignUpPageState extends State<SignUpPage> {
               SizedBox(
                 height: 20,
               ),
-              buttonItem("Google ile devam et.", "assets/google.svg", 25),
-              buttonItem("Telefon ile devam et", "assets/phone.svg", 25),
+              buttonItem("Google ile devam et.", "assets/images/google.svg", 25),
+              buttonItem("Telefon ile devam et", "assets/images/phone.svg", 25),
               SizedBox(
                 height: 10,
               ),
