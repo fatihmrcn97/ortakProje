@@ -11,13 +11,14 @@ class _ImageSliderState extends State<ImageSlider> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(20),
+      margin: EdgeInsets.all(3),
       child: Row(children: <Widget>[
         Expanded(
           child: SizedBox(
             height: 200,
             width: 100,
             child: ListView(
+              padding: EdgeInsets.all(5),
               children: <Widget>[
                 ImageSlideshow(
                   width: double.infinity,
@@ -28,7 +29,7 @@ class _ImageSliderState extends State<ImageSlider> {
                   onPageChanged: (value) {
                     debugPrint('Page changed: $value');
                   },
-                  autoPlayInterval: 3000,
+                  autoPlayInterval: 2000,
                   isLoop: true,
                   children: [
                     Image.asset(
@@ -41,6 +42,10 @@ class _ImageSliderState extends State<ImageSlider> {
                     ),
                     Image.asset(
                       'assets/images/ad3.jpg',
+                      fit: BoxFit.cover,
+                    ),
+                    Image.asset(
+                      'assets/images/ad4.png',
                       fit: BoxFit.cover,
                     ),
                   ],

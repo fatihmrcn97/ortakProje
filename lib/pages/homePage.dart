@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gelistirmeproje/pages/YourCard.dart';
-import 'package:gelistirmeproje/widgets/ShopByCategory.dart';
+import 'package:gelistirmeproje/widgets/shopByCategory.dart';
 import 'package:gelistirmeproje/widgets/medicationOrder.dart';
+import 'package:gelistirmeproje/widgets/shopByBrand.dart';
 import '../widgets/imageSlider.dart';
 
 class HomePage extends StatefulWidget {
@@ -103,6 +104,7 @@ class _HomePageState extends State<HomePage> {
               height: 30,
             ),
             ShopByCategoryWidget(),
+            ShopByBrand(),
           ],
         ),
       ),

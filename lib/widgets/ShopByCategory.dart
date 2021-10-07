@@ -9,7 +9,7 @@ class ShopByCategoryWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.only(left: 30, bottom: 1),
+            margin: EdgeInsets.only(left: 15, bottom: 1,top: 20),
             child: Text(
               'kategoriye göre alışveriş',
               textAlign: TextAlign.center,
@@ -21,8 +21,8 @@ class ShopByCategoryWidget extends StatelessWidget {
             ),
           ),
           Container(
-              margin: EdgeInsets.all(20),
-              height: 800,
+              margin: EdgeInsets.all(3),
+              height: 650,
               width: 600,
               child: Column(
                 children: <Widget>[
@@ -111,9 +111,9 @@ Widget _categorContainer(String imgUrl, String title) {
       margin: EdgeInsets.only(top: 10),
       child: Column(children: <Widget>[
         Card(
-          elevation: 3,
+          elevation: 5,
           child: Container(
-              width: 106.0,
+              width: 118.0,
               height: 90.0,
               decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
